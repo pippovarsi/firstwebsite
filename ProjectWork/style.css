@@ -1,0 +1,83 @@
+body{
+  background-image: url(background.jpg);
+  background-size: cover;
+}
+
+.container1{
+  width: 70%;
+  height: 550px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding-top: 2.5%;
+  box-sizing: border-box;
+} /* } BOX TRASLUCIDO */
+
+
+#logo{
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#logo-text{
+  text-align: center;
+  font-size: 25px;
+  font-family:monospace;
+  font-weight: 800;
+  color: #39ff14;
+  line-height: 25px;
+}
+
+
+#green-box{
+  width: 85%;
+  height: 40px;
+  background-color: #39ff14;
+  margin: auto;
+  margin-top: 1%;
+}
+
+.button{
+  text-align:center;
+  padding-top: 1.25%;
+  box-sizing: border-box;
+}
+
+.container2{
+  width: 85%;
+  margin: auto;
+} /*  BOX CONTENENTE INFO MONOPATTINI */
+
+
+.owner{
+  font-size: 22px;
+  font-weight: 550;
+}
+
+section{
+  color: white;
+}
+
+#charge-1{
+  width: 40%;
+  height: 20px;
+  background-color: orange;
+  border-radius: 5px;
+}
+
+#charge-2{
+  width: 65%;
+  height: 20px;
+  background-color: darkgreen;
+  border-radius: 5px;
+
+}
+
+#charge-3{
+  width: 20%;
+  height: 20px;
+  background-color: red;
+  border-radius: 5px;
+}
