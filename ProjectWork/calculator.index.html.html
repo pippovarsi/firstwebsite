@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="calculator.style.css.css">
+</head>
+<body>
+    <div id="container">
+
+        <div class="row">
+            <output id="display">0</output>
+        </div>
+
+        <div class="row">
+            <button class="button intermidiate_grey">C</button>
+            <button class="button intermidiate_grey">+/-</button>
+            <button class="button intermidiate_grey">%</button>
+            <button class="button orange" onclick="setArithmeticOperator('*')">X</button>
+        </div>
+
+        <div class="row">
+            <button class="button" onclick="setNumbers(7)">7</button>
+            <button class="button" onclick="setNumbers(8)">8</button>
+            <button class="button" onclick="setNumbers(9)">9</button>
+            <button class="button orange" onclick="setArithmeticOperator(':')">:</button>
+        </div>
+        <div class="row">
+            <button class="button" onclick="setNumbers(4)">4</button>
+            <button class="button" onclick="setNumbers(5)">5</button>
+            <button class="button" onclick="setNumbers(6)">6</button>
+            <button class="button orange" onclick="setArithmeticOperator('+')">+</button>
+        </div>
+        <div class="row">
+            <button class="button" onclick="setNumbers(1)">1</button>
+            <button class="button" onclick="setNumbers(2)">2</button>
+            <button class="button" onclick="setNumbers(3)">3</button>
+            <button class="button orange" onclick="setArithmeticOperator('-')">-</button>
+        </div>
+        <div class="row ">
+            <button id="first_button_last_row" onclick="setNumbers(0)">0</button>
+            <button class="button">,</button>
+            <button class="button orange" onclick="getResult(arithmeticSettings)">=</button>
+        </div>
+        
+    </div>
+
+    <script>
+
+        function setNumbers(number) {
+            if (arithmeticSettings.firstNumber == null) {
+                arithmeticSettings.firstNumber = number;
+                console.log("primoNumero = " + arithmeticSettings.firstNumber);
+            } else {
+                arithmeticSettings.secondNumber = number;
+                console.log("secondoNumero = " + arithmeticSettings.secondNumber);
+            }
+
+        }
+
+        function setArithmeticOperator(operator) {
+            arithmeticSettings.arithmeticOperator = operator;
+            console.log("operatoreAritmetico = " + arithmeticSettings.arithmeticOperator);
+        }
+
+        function getResult(Object) {
+            let displayObject = document.getElementById('display');
+            switch (Object.arithmeticOperator) {  
+                case '*':
+                    Object.result = (Object.firstNumber * Object.secondNumber);
+                    console.log("result " + Object.result);
+                    displayObject = document.getElementById('display');
+                    displayObject.innerText = Object.result;
+                    break;
+                case '-':
+                    Object.result = (Object.firstNumber - Object.secondNumber);
+                    console.log("result " + Object.result);
+                    displayObject = document.getElementById('display');
+                    displayObject.innerText = Object.result;
+                    break;
+                case '+':
+                    Object.result = (Object.firstNumber + Object.secondNumber);
+                    console.log("result " + Object.result);
+                    displayObject = document.getElementById('display');
+                    displayObject.innerText = Object.result;
+                    break;
+                case ':':
+                    if (Object.secondNumber == 0) {
+                        console.log("ERROR-DIVISIONE PER 0");
+                    }
+                    Object.result = (Object.firstNumber / Object.secondNumber);
+                    console.log("result " + Object.result);
+                    displayObject = document.getElementById('display');
+                    displayObject.innerText = Object.result;
+                    break;
+
+            }
+
+
+        }
+
+        
+
+        // creazione oggetto pachhetto aritmetico
+        // variabili andranno valorizzate quando clicco sui bottoni
+        var arithmeticSettings = {
+            firstNumber: null,
+            secondNumber: null,
+            arithmeticOperator: null,
+            result: null,
+        }
+    </script>
+    
+</body>
+</html>

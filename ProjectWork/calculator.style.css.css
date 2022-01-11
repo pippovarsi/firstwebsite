@@ -1,0 +1,51 @@
+body{
+    background-image: url(wp3594884.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#container{
+    width: 300px;
+    height: 350px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
+.row{
+    background-color: wheat;
+    height: 70px;
+    display: flex;
+}
+#display{
+    width: 100%;
+    color: white;
+    font-size: 175%;
+    text-align: right;
+    background: #535052;
+    min-width: 100px;
+}
+.button{
+    width: 25%;
+    color: white;
+    font-size: 175%;
+    background: #b2b2b2;
+}
+#first_button_last_row{
+    width: 50%;
+    color: white;
+    font-size: 175%;
+    background: #b2b2b2;
+}
+.orange{
+    background-color: orange;
+}
+.intermidiate_grey{
+    background: #7C7A7B;
+}
+
+
+
+
